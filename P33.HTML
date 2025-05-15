@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <link rel="stylesheet" href="P33.CSS">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELYTRA | Location Premium de Voitures</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="elT (2).png" alt="logo" class="logoo">
+                
+            </div>
+            <nav class="nav-links">
+                <a href="#" class="nav-link">Accueil</a>
+                <a href="#" class="nav-link">Véhicules</a>
+                <a href="#" class="nav-link">Services</a>
+                <a href="C:\Users\swayl\OneDrive\Desktop\p3\contact.html" class="nav-link">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content fade-in">
+            <h1>Trouvez la voiture parfaite pour votre voyage</h1>
+            <p>Découvrez notre sélection premium de véhicules à louer aux meilleurs prix</p>
+            <div class="search-bar">
+                <input type="text" class="search-input" placeholder="Rechercher un modèle...">
+                <button class="search-btn">
+                    <i class="fas fa-search"></i>
+                    Rechercher
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="filters-section">
+        <h2 class="filters-title">
+            <i class="fas fa-sliders-h"></i>
+            Filtrer les résultats
+        </h2>
+        <div class="filters">
+            <div class="filter-group fade-in delay-1">
+                <label for="brand" class="filter-label">
+                    <i class="fas fa-tag"></i>
+                    Marque
+                </label>
+                <select id="brand" class="filter-select">
+                    <option value="all">Toutes les marques</option>
+                    <option value="peugeot">Peugeot</option>
+                    <option value="bmw">BMW</option>
+                    <option value="audi">Audi</option>
+                    <option value="mercedes">Mercedes</option>
+                    <option value="tesla">Tesla</option>
+                    <option value="porsche">Porsche</option>
+                </select>
+            </div>
+            
+            <div class="filter-group fade-in delay-1">
+                <label for="type" class="filter-label">
+                    <i class="fas fa-car-side"></i>
+                    Type
+                </label>
+                <select id="type" class="filter-select">
+                    <option value="all">Tous types</option>
+                    <option value="suv">SUV</option>
+                    <option value="berline">Berline</option>
+                    <option value="citadine">Citadine</option>
+                    <option value="sportive">Sportive</option>
+                    <option value="luxe">Luxe</option>
+                </select>
+            </div>
+            
+            <div class="filter-group fade-in delay-2">
+                <label for="price" class="filter-label">
+                    <i class="fas fa-euro-sign"></i>
+                    Prix max/jour
+                </label>
+                <div class="price-container">
+                    <input type="range" id="price" min="30" max="300" value="300" class="filter-input">
+                    <div class="price-value" id="price-value">300€</div>
+                </div>
+            </div>
+            
+            <div class="filter-group fade-in delay-2">
+                <label for="transmission" class="filter-label">
+                    <i class="fas fa-cog"></i>
+                    Transmission
+                </label>
+                <select id="transmission" class="filter-select">
+                    <option value="all">Tous</option>
+                    <option value="automatique">Automatique</option>
+                    <option value="manuelle">Manuelle</option>
+                </select>
+            </div>
+        </div>
+    </section>
+
+    <section class="cars-section">
+        <div class="section-header">
+            <h2 class="section-title">Nos véhicules disponibles</h2>
+            <a href="#" class="view-all">
+                Voir tout
+                <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+        
+        <div class="cars-container">
+ 
+            <div class="car-card fade-in">
+                <div class="car-badge">Recommandé</div>
+                <div class="car-image-container">
+                    <img src="pepe.jpeg" alt="Peugeot 3008 GT" class="car-image">
+                </div>
+                <div class="car-info">
+                    <div class="car-header">
+                        <h3 class="car-title">Peugeot 3008 GT</h3>
+                        <div class="car-price">85€ <span>/jour</span></div>
+                    </div>
+                    <div class="car-details">
+                        <div class="car-detail">
+                            <i class="fas fa-calendar-alt"></i>
+                            2023
+                        </div>
+                        <div class="car-detail">
+                            <i class="fas fa-users"></i>
+                            5 places
+                        </div>
+                        <div class="car-detail">
+                            <i class="fas fa-gas-pump"></i>
+                            Hybride
+                        </div>
+                        <div class="car-detail">
+                            <i class="fas fa-cog"></i>
+                            Automatique
+                        </div>
+                    </div>
+                    <div class="car-footer">
+                        <div class="car-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(124)</span>
+                        </div>
+                        <a href="C:\Users\swayl\OneDrive\Desktop\p3\P1.html" class="rent-btn"> <i class="fas fa-shopping-cart"></i>Réserver</a>
+
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="car-card fade-in">
+                <div class="car-image-container">
+                    <img src="bmw.jpeg" alt="BMW X5 xDrive45e" class="car-image">
+                </div>
+                <div class="car-info">
+                    <div class="car-header">
+                        <h3 class="car-title">BMW X5 xDrive45e</h3>
+                        <div class="car-price">190€ <span>/jour</span></div>
+                    </div>
+                    <div class="car-details">
+                        <div class="car-detail">
+                            <i class="fas fa-calendar-alt"></i>
+                            2022
+                        </div>
+                        <div class="car-detail">
+                            <i class="fas fa-users"></i>
+                            5 places
+                        </div>
+                        <div class="car-detail">
+                            <i class="fas fa-gas-pump"></i>
+                            Hybride
+                        </div>
+                        <div class="car-detail">
+                            <i class="fas fa-cog"></i>
+                            Automatique
+                        </div>
+                    </div>
+                    <div class="car-footer">
+                        <div class="car-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(98)</span>
+                        </div>
+                        <a href="C:\Users\swayl\OneDrive\Desktop\p3\P2.HTML" class="rent-btn"> <i class="fas fa-shopping-cart"></i>Réserver</a>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="car-card fade-in">
+                <div class="car-badge">Recommandé</div>
+                <div class="car-image-container">
+                    <img src="audi.jpeg" alt="Audi A5 Sportback" class="car-image">
+                </div>
+                <div class="car-info">
+                    <div class="car-header">
+                        <h3 class="car-title">Audi A5 Sportback</h3>
+                        <div class="car-price">150€ <span>/jour</span></div>
+                    </div>
+                    <div class="car-details">
+                        <div class="car-detail">
+                            <i class="fas fa-calendar-alt"></i>
+                            2023
+                        </div>
+                        <div class="car-detail">
+                            <i class="fas fa-users"></i>
+                            5 places
+                        </div>
+                        <div class="car-detail">
+                            <i class="fas fa-gas-pump"></i>
+                            Essence
+                        </div>
+                        <div class="car-detail">
+                            <i class="fas fa-cog"></i>
+                            Automatique
+                        </div>
+                    </div>
+                    <div class="car-footer">
+                        <div class="car-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(87)</span>
+                        </div>
+                        <a href="C:\Users\swayl\OneDrive\Desktop\p3\P4.HTML" class="rent-btn"> <i class="fas fa-shopping-cart"></i>Réserver</a>
+
+                    </div>
+                </div>
+            </div>
+
+           
+            <div class="car-card fade-in">
+                <div class="car-image-container">
+                    <img src="merco.jpeg" alt="Mercedes Classe C" class="car-image">
+                </div>
+                <div class="car-info">
+                    <div class="car-header">
+                        <h3 class="car-title">Mercedes Classe C</h3>
+                        <div class="car-price">175€ <span>/jour</span></div>
+                    </div>
+                    <div class="car-details">
+                        <div class="car-detail">
+                            <i class="fas fa-calendar-alt"></i>
+                            2023
+                        </div>
+                        <div class="car-detail">
+                            <i class="fas fa-users"></i>
+                            5 places
+                        </div>
+                        <div class="car-detail">
+                            <i class="fas fa-gas-pump"></i>
+                            Diesel
+                        </div>
+                        <div class="car-detail">
+                            <i class="fas fa-cog"></i>
+                            Automatique
+                        </div>
+                    </div>
+                    <div class="car-footer">
+                        <div class="car-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(112)</span>
+                        </div>
+                        <a href="C:\Users\swayl\OneDrive\Desktop\p3\P5.HTML" class="rent-btn"> <i class="fas fa-shopping-cart"></i>Réserver</a>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="car-card fade-in">
+                <div class="car-badge">Recommandé</div>
+                <div class="car-image-container">
+                    <img src="tesla.jpeg" alt="Tesla Model 3" class="car-image">
+                </div>
+                <div class="car-info">
+                    <div class="car-header">
+                        <h3 class="car-title">Tesla Model 3</h3>
+                        <div class="car-price">160€ <span>/jour</span></div>
+                    </div>
+                    <div class="car-details">
+                        <div class="car-detail">
+                            <i class="fas fa-calendar-alt"></i>
+                            2023
+                        </div>
+                        <div class="car-detail">
+                            <i class="fas fa-users"></i>
+                            5 places
+                        </div>
+                        <div class="car-detail">
+                            <i class="fas fa-gas-pump"></i>
+                            Électrique
+                        </div>
+                        <div class="car-detail">
+                            <i class="fas fa-cog"></i>
+                            Automatique
+                        </div>
+                    </div>
+                    <div class="car-footer">
+                        <div class="car-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(156)</span>
+                        </div>
+                        <a href="C:\Users\swayl\OneDrive\Desktop\p3\P3.html" class="rent-btn"> <i class="fas fa-shopping-cart"></i>Réserver</a>
+
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="car-card fade-in">
+                <div class="car-badge">Recommandé</div>
+                <div class="car-image-container">
+                    <img src="popo.jpeg" alt="Porsche 911 Carrera" class="car-image">
+                </div>
+                <div class="car-info">
+                    <div class="car-header">
+                        <h3 class="car-title">Porsche 911 Carrera</h3>
+                        <div class="car-price">280€ <span>/jour</span></div>
+                    </div>
+                    <div class="car-details">
+                        <div class="car-detail">
+                            <i class="fas fa-calendar-alt"></i>
+                            2022
+                        </div>
+                        <div class="car-detail">
+                            <i class="fas fa-users"></i>
+                            4 places
+                        </div>
+                        <div class="car-detail">
+                            <i class="fas fa-gas-pump"></i>
+                            Essence
+                        </div>
+                        <div class="car-detail">
+                            <i class="fas fa-cog"></i>
+                            Automatique
+                        </div>
+                    </div>
+                    <div class="car-footer">
+                        <div class="car-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(76)</span>
+                        </div>
+                        <a href="C:\Users\swayl\OneDrive\Desktop\p3\P6.HTML" class="rent-btn"> <i class="fas fa-shopping-cart"></i>Réserver</a>
+                      
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features-section">
+        <div class="features-container">
+            <div class="feature-card fade-in">
+                <div class="feature-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3 class="feature-title">Assurance complète</h3>
+                <p class="feature-text">Tous nos véhicules sont couverts par une assurance tous risques pour votre tranquillité d'esprit.</p>
+            </div>
+            
+            <div class="feature-card fade-in delay-1">
+                <div class="feature-icon">
+                    <i class="fas fa-tachometer-alt"></i>
+                </div>
+                <h3 class="feature-title">Kilométrage illimité</h3>
+                <p class="feature-text">Conduisez sans compter avec notre option kilométrage illimité sur tous nos véhicules.</p>
+            </div>
+            
+            <div class="feature-card fade-in delay-2">
+                <div class="feature-icon">
+                    <i class="fas fa-headset"></i>
+                </div>
+                <h3 class="feature-title">Assistance 24/7</h3>
+                <p class="feature-text">Notre équipe est disponible 24h/24 et 7j/7 pour répondre à toutes vos demandes.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <div class="footer-logo">
+                   
+                    <span class="footer-logo-text" style="color: #fe5c3c;">ELYTRA</span>
+                </div>
+                <p class="footer-about">
+                    ELYTRA propose des solutions de location de véhicules haut de gamme avec un service personnalisé et des tarifs compétitifs.
+                </p>
+              
+            </div>
+            
+            <div class="footer-col">
+                <h3 class="footer-title">Liens rapides</h3>
+                <ul class="footer-links">
+                    <li class="footer-link"><a href="C:\Users\swayl\OneDrive\Desktop\p3\P34.HTML"><i class="fas fa-chevron-right"></i> Accueil</a></li>
+                    <li class="footer-link"><a href="C:\Users\swayl\OneDrive\Desktop\p3\P33.HTML"><i class="fas fa-chevron-right"></i> Nos véhicules</a></li>
+                    <li class="footer-link"><a href="C:\Users\swayl\OneDrive\Desktop\p3\P34.HTML"><i class="fas fa-chevron-right"></i> Services</a></li>
+                    <li class="footer-link"><a href="#"><i class="fas fa-chevron-right"></i> À propos</a></li>
+                    <li class="footer-link"><a href="#"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h3 class="footer-title">Nos services</h3>
+                <ul class="footer-links">
+                    <li class="footer-link"><a href="#"><i class="fas fa-chevron-right"></i> Location courte durée</a></li>
+                    <li class="footer-link"><a href="#"><i class="fas fa-chevron-right"></i> Location longue durée</a></li>
+                    <li class="footer-link"><a href="#"><i class="fas fa-chevron-right"></i> Voitures premium</a></li>
+                    <li class="footer-link"><a href="#"><i class="fas fa-chevron-right"></i> Service avec chauffeur</a></li>
+                    <li class="footer-link"><a href="#"><i class="fas fa-chevron-right"></i> Assistance routière</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h3 class="footer-title">Contactez-nous</h3>
+                <div class="footer-contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>EMSI-GUELIZ-MARRAKECH</span>
+                </div>
+                <div class="footer-contact-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <span>+212 6 27 49 76 05</span>
+                </div>
+                <div class="footer-contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>ELYTRA-rent@gmail.com</span>
+                </div>
+                <div class="footer-contact-item">
+                   <i class="fas fa-clock"></i>
+                    <span>Lun-Sam: 8h-20h</span>
+                </div>
+            </div>
+        </div>
+        
+     
+    </footer>
+
+    <script>
+     
+        document.addEventListener('DOMContentLoaded', () => {
+            const animateOnScroll = () => {
+                const elements = document.querySelectorAll('.fade-in');
+                elements.forEach(el => {
+                    const elementPosition = el.getBoundingClientRect().top;
+                    const windowHeight = window.innerHeight;
+                    
+                    if (elementPosition < windowHeight - 100) {
+                        el.style.opacity = '1';
+                        el.style.transform = 'translateY(0)';
+                    }
+                });
+            };
+            
+            window.addEventListener('scroll', animateOnScroll);
+            animateOnScroll();
+        });
+
+        
+        document.getElementById('price').addEventListener('input', function() {
+            document.getElementById('price-value').textContent = this.value + '€';
+        });
+    </script>
+</body>
+</html>
