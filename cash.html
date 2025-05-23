@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELYTRA | Paiement</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --gray: #94a3b8;
+            --light-gray: #e2e8f0;
+            --success: #10b981;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: #f1f5f9;
+            color: var(--dark);
+        }
+
+        /* Header */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 1rem 0;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo img {
+            height: 40px;
+        }
+
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-link:hover {
+            color: var(--primary);
+        }
+
+        /* Main Content */
+        .payment-container {
+            max-width: 800px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+
+        .payment-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .payment-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 1rem;
+        }
+
+        .payment-subtitle {
+            color: var(--gray);
+            font-size: 1rem;
+        }
+
+        /* Payment Form */
+        .payment-form {
+            background-color: white;
+            border-radius: 0.5rem;
+            padding: 2rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: var(--dark);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .section-title i {
+            color: var(--primary);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--dark);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 1px solid var(--light-gray);
+            border-radius: 0.375rem;
+            font-size: 1rem;
+            transition: all 0.2s;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .card-icons {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .card-icon {
+            width: 40px;
+            height: 25px;
+            object-fit: contain;
+            border: 1px solid var(--light-gray);
+            border-radius: 0.25rem;
+            padding: 0.25rem;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 0.375rem;
+            font-weight: 500;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            gap: 0.5rem;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: white;
+            width: 100%;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+        }
+
+        .btn-back {
+            background-color: white;
+            color: var(--dark);
+            border: 1px solid var(--light-gray);
+            margin-top: 1rem;
+            width: 100%;
+        }
+
+        .btn-back:hover {
+            background-color: #f8fafc;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 3rem 0 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 1.5rem;
+            margin-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.875rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                
+                <span class="logo-text" style="color: #fe5c3c;">ELYTRA</span>
+            </div>
+            <nav class="nav-links">
+                <a href="C:\Users\swayl\OneDrive\Desktop\p3\P34.HTML" class="nav-link">Accueil</a>
+                <a href="C:\Users\swayl\OneDrive\Desktop\p3\P33.HTML" class="nav-link">Véhicules</a>
+              
+            </nav>
+        </div>
+    </header>
+
+    <main class="payment-container">
+        <div class="payment-header">
+            <h1 class="payment-title">Finalisez votre réservation</h1>
+            <p class="payment-subtitle">Remplissez vos informations de paiement pour confirmer votre location</p>
+        </div>
+
+        <div class="payment-form">
+            <h2 class="section-title">
+                <i class="fas fa-credit-card"></i>
+                Informations de paiement
+            </h2>
+            
+            <form id="paymentForm">
+                <div class="form-group">
+                    <label for="cardName" class="form-label">Nom sur la carte</label>
+                    <input type="text" id="cardName" class="form-control" placeholder="Nom comme affiché sur la carte" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="cardNumber" class="form-label">Numéro de carte</label>
+                    <input type="text" id="cardNumber" class="form-control" placeholder="1234 5678 9012 3456" required>
+                    <div class="card-icons">
+                        <img src="https://cdn-icons-png.flaticon.com/512/196/196578.png" alt="Visa" class="card-icon">
+                        <img src="https://cdn-icons-png.flaticon.com/512/196/196561.png" alt="Mastercard" class="card-icon">
+                        <img src="https://cdn-icons-png.flaticon.com/512/196/196566.png" alt="American Express" class="card-icon">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="expiryDate" class="form-label">Date d'expiration</label>
+                        <input type="text" id="expiryDate" class="form-control" placeholder="MM/AA" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cvv" class="form-label">Code de sécurité (CVV)</label>
+                        <input type="text" id="cvv" class="form-control" placeholder="123" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email" class="form-label">Email pour confirmation</label>
+                    <input type="email" id="email" class="form-control" placeholder="votre@email.com" required>
+                </div>
+                <a href="C:\Users\swayl\OneDrive\Desktop\p3\fin.html" class="btn btn-primary" style="color: #fe5c3c;"> 
+                    <i class="fas fa-lock"></i>
+                    Payer maintenant
+                </a>
+               
+
+                <button type="button" class="btn btn-back" onclick="window.history.back()">
+                    <i class="fas fa-arrow-left"></i>
+                    Retour
+                </button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        
+    </footer>
+
+    <script>
+        document.getElementById('paymentForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Validation simple
+            const cardNumber = document.getElementById('cardNumber').value.replace(/\s/g, '');
+            const cvv = document.getElementById('cvv').value;
+            
+            if (!/^\d{16}$/.test(cardNumber)) {
+                alert('Veuillez entrer un numéro de carte valide (16 chiffres)');
+                return;
+            }
+            
+            if (!/^\d{3,4}$/.test(cvv)) {
+                alert('Veuillez entrer un CVV valide (3 ou 4 chiffres)');
+                return;
+            }
+            
+            // Simulation de paiement réussi
+            alert('Paiement effectué avec succès !');
+            // Redirection vers la page de confirmation
+            window.location.href = 'confirmation.html';
+        });
+
+        // Formatage du numéro de carte
+        document.getElementById('cardNumber').addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\s/g, '');
+            if (value.length > 0) {
+                value = value.match(new RegExp('.{1,4}', 'g')).join(' ');
+            }
+            e.target.value = value;
+        });
+
+        // Formatage de la date d'expiration
+        document.getElementById('expiryDate').addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\D/g, '');
+            if (value.length > 2) {
+                value = value.substring(0, 2) + '/' + value.substring(2, 4);
+            }
+            e.target.value = value;
+        });
+    </script>
+</body>
+</html> 
